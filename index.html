@@ -1,0 +1,2073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thoyajaksh's Skills Hub | TSH</title>
+
+<meta name="description"
+content="Thoyajaksh's Skills Hub — Explore year-wise and branch-wise
+skills, programming, projects and engineering learning resources.">
+
+<meta name="theme-color" content="#101c40">
+
+<style>
+/* ==========================================
+   1. DESIGN SYSTEM — PINK AND BLUE
+========================================== */
+
+:root {
+    --bg: #080e20;
+    --bg2: #101a35;
+    --card: #131f3d;
+    --card-hover: #1a2a4e;
+
+    --blue: #74a7ff;
+    --blue-dark: #3569dc;
+    --pink: #ff91c8;
+    --pink-light: #ffd0e7;
+
+    --text: #f5f7ff;
+    --muted: #aebbd5;
+    --border: rgba(255,255,255,.11);
+
+    --radius: 18px;
+    --width: 1150px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+}
+
+button, input, select {
+    font: inherit;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(92%, var(--width));
+    margin: auto;
+}
+
+.section {
+    padding: 48px 0;
+}
+
+.section-heading {
+    margin-bottom: 24px;
+}
+
+.section-heading h2 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    max-width: 720px;
+}
+
+.eyebrow {
+    color: var(--pink);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--pink);
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   2. BRAND HEADER
+========================================== */
+
+.brand-header {
+    padding: 18px 0;
+    background: #0b132b;
+    border-bottom: 1px solid var(--border);
+}
+
+.brand-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    color: white;
+    font-weight: 900;
+    font-size: 1rem;
+    background: linear-gradient(135deg, var(--blue-dark), var(--pink));
+}
+
+.brand-title {
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+}
+
+.brand-subtitle {
+    color: var(--muted);
+    font-size: .77rem;
+}
+
+.header-label {
+    color: var(--pink-light);
+    font-size: .8rem;
+    text-align: right;
+}
+
+/* ==========================================
+   3. HERO
+========================================== */
+
+.hero {
+    padding: 64px 0 35px;
+    background:
+        radial-gradient(
+            ellipse at 90% 10%,
+            rgba(116,167,255,.19),
+            transparent 43%
+        ),
+        radial-gradient(
+            ellipse at 5% 80%,
+            rgba(255,145,200,.13),
+            transparent 42%
+        );
+}
+
+.hero h1 {
+    max-width: 900px;
+    font-size: clamp(2.2rem, 6vw, 4.2rem);
+    line-height: 1.12;
+    letter-spacing: -1.3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        var(--pink),
+        var(--blue)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-description {
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 1rem;
+    margin-bottom: 22px;
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 20px;
+}
+
+.badge {
+    background: rgba(255,255,255,.045);
+    border: 1px solid var(--border);
+    color: #e4eaff;
+    padding: 6px 11px;
+    border-radius: 30px;
+    font-size: .78rem;
+}
+
+/* ==========================================
+   4. SEARCH BOX
+========================================== */
+
+.search-section {
+    padding: 25px 0 15px;
+}
+
+.search-panel {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 23px;
+    border-radius: var(--radius);
+}
+
+.search-panel h2 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.search-panel p {
+    color: var(--muted);
+    font-size: .88rem;
+    margin-bottom: 15px;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+}
+
+.search-row input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 15px;
+    background: #080e20;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: white;
+}
+
+.search-row input::placeholder {
+    color: #8999b8;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    padding: 11px 17px;
+    font-weight: 800;
+    transition: .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(110deg, var(--pink), var(--blue));
+    color: #10152b;
+}
+
+.btn-secondary {
+    background: var(--card);
+    border-color: var(--border);
+    color: white;
+}
+
+#searchStatus {
+    margin-top: 12px;
+    margin-bottom: 0;
+    min-height: 24px;
+}
+
+/* ==========================================
+   5. YEAR SELECTOR
+========================================== */
+
+.year-section {
+    padding-top: 35px;
+}
+
+.year-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.year-card {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: .2s;
+}
+
+.year-card:hover,
+.year-card.active {
+    border-color: var(--pink);
+    background: var(--card-hover);
+    transform: translateY(-3px);
+}
+
+.year-number {
+    display: block;
+    color: var(--pink);
+    font-weight: 900;
+    font-size: 1.55rem;
+    margin-bottom: 7px;
+}
+
+.year-card h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.year-card p {
+    color: var(--muted);
+    font-size: .82rem;
+}
+
+/* ==========================================
+   6. BRANCH SELECTOR
+========================================== */
+
+.branch-section {
+    padding-top: 35px;
+}
+
+.branch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+}
+
+.branch-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    width: 100%;
+    text-align: left;
+    color: var(--text);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 17px;
+    transition: .2s;
+}
+
+.branch-card:hover,
+.branch-card.active {
+    border-color: var(--blue);
+    background: var(--card-hover);
+    transform: translateY(-2px);
+}
+
+.branch-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: rgba(116,167,255,.13);
+    font-size: 1.35rem;
+}
+
+.branch-card h3 {
+    font-size: .94rem;
+    margin-bottom: 4px;
+}
+
+.branch-card p {
+    font-size: .78rem;
+    color: var(--muted);
+}
+
+/* ==========================================
+   7. SKILLS RESULTS
+========================================== */
+
+.results-section {
+    background: var(--bg2);
+    border-block: 1px solid var(--border);
+}
+
+.selection-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.selection-info p {
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.selection-tag {
+    display: inline-block;
+    padding: 6px 11px;
+    border: 1px solid rgba(255,145,200,.35);
+    border-radius: 20px;
+    color: var(--pink-light);
+    font-size: .78rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.skill-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 21px;
+    transition: .2s;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,145,200,.65);
+}
+
+.skill-icon {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: rgba(255,145,200,.12);
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+}
+
+.skill-card h3 {
+    font-size: 1.04rem;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    color: var(--muted);
+    font-size: .86rem;
+    margin-bottom: 15px;
+}
+
+.skill-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 15px;
+}
+
+.skill-tag {
+    font-size: .72rem;
+    padding: 5px 8px;
+    border-radius: 7px;
+    background: rgba(116,167,255,.11);
+    color: #d8e5ff;
+}
+
+.skill-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.level {
+    color: var(--pink-light);
+    font-size: .75rem;
+}
+
+.resource-link {
+    color: var(--blue);
+    font-size: .82rem;
+    font-weight: 800;
+}
+
+.empty-state {
+    display: none;
+    padding: 35px 15px;
+    text-align: center;
+    color: var(--muted);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+}
+
+.empty-state h3 {
+    color: white;
+    margin-bottom: 7px;
+}
+
+/* ==========================================
+   8. THOEDGE PICKS
+========================================== */
+
+.picks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.pick-card {
+    position: relative;
+    overflow: hidden;
+    padding: 23px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(
+        145deg,
+        rgba(116,167,255,.12),
+        rgba(255,145,200,.08),
+        var(--card)
+    );
+}
+
+.pick-card .pick-icon {
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+}
+
+.pick-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.pick-card p {
+    color: var(--muted);
+    font-size: .86rem;
+}
+
+/* ==========================================
+   9. PROJECTS
+========================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 22px;
+    border-radius: var(--radius);
+}
+
+.project-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    color: var(--muted);
+    font-size: .86rem;
+    margin-bottom: 13px;
+}
+
+.project-level {
+    color: var(--pink);
+    font-size: .76rem;
+    font-weight: 800;
+}
+
+/* ==========================================
+   10. FOOTER
+========================================== */
+
+footer {
+    background: #070b18;
+    border-top: 1px solid var(--border);
+    padding: 30px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.footer-inner strong {
+    font-size: .95rem;
+}
+
+.footer-inner p {
+    color: var(--muted);
+    font-size: .8rem;
+}
+
+/* ==========================================
+   11. RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 900px) {
+    .year-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .branch-grid,
+    .skills-grid,
+    .picks-grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 580px) {
+    .header-label {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 45px;
+    }
+
+    .hero h1 {
+        font-size: 2.45rem;
+    }
+
+    .section {
+        padding: 35px 0;
+    }
+
+    .year-grid,
+    .branch-grid,
+    .skills-grid,
+    .picks-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    .search-row .btn {
+        width: 100%;
+    }
+
+    .selection-info {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .brand-title {
+        font-size: .9rem;
+    }
+
+    .brand-subtitle {
+        font-size: .7rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ==========================================
+     HEADER
+========================================== -->
+
+<header class="brand-header">
+    <div class="container brand-inner">
+
+        <div class="brand">
+            <div class="logo">TSH</div>
+
+            <div>
+                <div class="brand-title">
+                    THOYAJAKSH'S SKILLS HUB
+                </div>
+
+                <div class="brand-subtitle">
+                    Skills • Projects • Learning
+                </div>
+            </div>
+        </div>
+
+        <div class="header-label">
+            LEARN · PRACTISE · BUILD
+        </div>
+
+    </div>
+</header>
+
+
+<main>
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<section class="hero">
+    <div class="container">
+
+        <span class="eyebrow">
+            YOUR SKILLS. YOUR FUTURE.
+        </span>
+
+        <h1>
+            Welcome to<br>
+            <span>Thoyajaksh's Skills Hub.</span>
+        </h1>
+
+        <p class="hero-description">
+            Discover the right skills for your engineering branch
+            and academic year. Explore programming, technical tools,
+            projects, professional skills and learning resources
+            organised around your educational journey.
+        </p>
+
+        <div class="hero-badges">
+            <span class="badge">🎓 Year-wise Learning</span>
+            <span class="badge">⚙️ Branch-wise Skills</span>
+            <span class="badge">💻 Programming</span>
+            <span class="badge">🚀 Projects</span>
+            <span class="badge">📚 Learning Resources</span>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==========================================
+     SEARCH
+========================================== -->
+
+<section class="search-section">
+    <div class="container">
+
+        <div class="search-panel">
+
+            <h2>⌕ Search Skills & Projects</h2>
+
+            <p>
+                Search by skill, topic, tool, project or branch.
+                Results update automatically.
+            </p>
+
+            <form id="searchForm" class="search-row">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Try Python, CSE, CAD, AI, Git..."
+                    aria-label="Search skills and projects"
+                    autocomplete="off">
+
+                <button class="btn btn-primary" type="submit">
+                    SEARCH
+                </button>
+
+                <button
+                    class="btn btn-secondary"
+                    type="button"
+                    id="clearSearch">
+                    CLEAR
+                </button>
+
+            </form>
+
+            <p id="searchStatus" aria-live="polite">
+                Select your year and branch below to get started.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==========================================
+     YEAR-WISE SELECTION
+========================================== -->
+
+<section class="section year-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">STEP 01</span>
+
+            <h2>🎓 Choose Your Academic Year</h2>
+
+            <p>
+                Start with common foundational skills in First Year.
+                Select your year to discover the relevant learning paths.
+            </p>
+        </div>
+
+        <div class="year-grid">
+
+            <button class="year-card active"
+                    type="button"
+                    data-year="1">
+
+                <span class="year-number">01</span>
+                <h3>First Year</h3>
+                <p>Common foundations and essential skills.</p>
+
+            </button>
+
+            <button class="year-card"
+                    type="button"
+                    data-year="2">
+
+                <span class="year-number">02</span>
+                <h3>Second Year</h3>
+                <p>Core concepts and branch-specific foundations.</p>
+
+            </button>
+
+            <button class="year-card"
+                    type="button"
+                    data-year="3">
+
+                <span class="year-number">03</span>
+                <h3>Third Year</h3>
+                <p>Advanced skills, specialisation and projects.</p>
+
+            </button>
+
+            <button class="year-card"
+                    type="button"
+                    data-year="4">
+
+                <span class="year-number">04</span>
+                <h3>Fourth Year</h3>
+                <p>Capstone projects and career preparation.</p>
+
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==========================================
+     BRANCH-WISE SELECTION
+========================================== -->
+
+<section class="section branch-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">STEP 02</span>
+
+            <h2>⚙️ Choose Your Engineering Branch</h2>
+
+            <p>
+                First Year includes shared foundational skills.
+                For other years, select your branch to see
+                more specialised skills and projects.
+            </p>
+        </div>
+
+        <div class="branch-grid" id="branchGrid">
+
+            <button class="branch-card active"
+                    type="button"
+                    data-branch="CSE">
+
+                <span class="branch-icon">💻</span>
+
+                <span>
+                    <h3>Computer Science (CSE)</h3>
+                    <p>Programming, algorithms, software and AI.</p>
+                </span>
+
+            </button>
+
+
+            <button class="branch-card"
+                    type="button"
+                    data-branch="IT">
+
+                <span class="branch-icon">🌐</span>
+
+                <span>
+                    <h3>Information Technology</h3>
+                    <p>Web systems, databases, networks and cloud.</p>
+                </span>
+
+            </button>
+
+
+            <button class="branch-card"
+                    type="button"
+                    data-branch="ECE">
+
+                <span class="branch-icon">📡</span>
+
+                <span>
+                    <h3>Electronics (ECE)</h3>
+                    <p>Embedded systems, circuits and communication.</p>
+                </span>
+
+            </button>
+
+
+            <button class="branch-card"
+                    type="button"
+                    data-branch="EEE">
+
+                <span class="branch-icon">⚡</span>
+
+                <span>
+                    <h3>Electrical (EEE)</h3>
+                    <p>Electrical systems, control and simulation.</p>
+                </span>
+
+            </button>
+
+
+            <button class="branch-card"
+                    type="button"
+                    data-branch="MECH">
+
+                <span class="branch-icon">⚙️</span>
+
+                <span>
+                    <h3>Mechanical Engineering</h3>
+                    <p>CAD, manufacturing and mechanical design.</p>
+                </span>
+
+            </button>
+
+
+            <button class="branch-card"
+                    type="button"
+                    data-branch="CIVIL">
+
+                <span class="branch-icon">🏗️</span>
+
+                <span>
+                    <h3>Civil Engineering</h3>
+                    <p>CAD, surveying and structural modelling.</p>
+                </span>
+
+            </button>
+
+
+            <button class="branch-card"
+                    type="button"
+                    data-branch="AERO">
+
+                <span class="branch-icon">🚀</span>
+
+                <span>
+                    <h3>Aerospace Engineering</h3>
+                    <p>CAD, simulation, aerodynamics and flight.</p>
+                </span>
+
+            </button>
+
+
+            <button class="branch-card"
+                    type="button"
+                    data-branch="CHEM">
+
+                <span class="branch-icon">🧪</span>
+
+                <span>
+                    <h3>Chemical Engineering</h3>
+                    <p>Process modelling, data and simulation.</p>
+                </span>
+
+            </button>
+
+
+            <button class="branch-card"
+                    type="button"
+                    data-branch="OTHER">
+
+                <span class="branch-icon">🔧</span>
+
+                <span>
+                    <h3>Other Engineering Branches</h3>
+                    <p>Explore interdisciplinary technical skills.</p>
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==========================================
+     SKILLS RESULTS
+========================================== -->
+
+<section class="section results-section" id="results">
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">YOUR LEARNING PATH</span>
+
+            <h2>📚 Skills & Learning Resources</h2>
+
+            <p>
+                Explore skills suited to your selected year
+                and branch. These are suggested learning topics;
+                resource links can be added as they become available.
+            </p>
+
+        </div>
+
+        <div class="selection-info">
+
+            <div>
+                <span class="selection-tag" id="selectionTag">
+                    First Year · CSE
+                </span>
+
+                <p id="selectionDescription">
+                    Foundational skills useful across engineering branches.
+                </p>
+            </div>
+
+            <p id="resultCount">Loading skills...</p>
+
+        </div>
+
+        <div class="skills-grid" id="skillsGrid"></div>
+
+        <div class="empty-state" id="emptyState">
+            <h3>No matching skills found</h3>
+            <p>Try a different search term or select another branch.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==========================================
+     THOEDGE PICKS
+========================================== -->
+
+<section class="section">
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">RECOMMENDED LEARNING</span>
+
+            <h2>💎 thoEdge Picks</h2>
+
+            <p>
+                A few recommended areas to help you develop
+                practical, transferable skills.
+            </p>
+
+        </div>
+
+        <div class="picks-grid">
+
+            <article class="pick-card">
+                <div class="pick-icon">💻</div>
+                <h3>Programming Fundamentals</h3>
+                <p>
+                    Start with one programming language.
+                    Learn logic, conditions, loops, functions
+                    and basic problem-solving.
+                </p>
+            </article>
+
+            <article class="pick-card">
+                <div class="pick-icon">🛠️</div>
+                <h3>Build Practical Projects</h3>
+                <p>
+                    Apply your knowledge through small projects,
+                    document your work and improve your skills
+                    by solving real problems.
+                </p>
+            </article>
+
+            <article class="pick-card">
+                <div class="pick-icon">📂</div>
+                <h3>Git & Technical Communication</h3>
+                <p>
+                    Learn version control, write clear documentation
+                    and organise your projects into a useful portfolio.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==========================================
+     PROJECT IDEAS
+========================================== -->
+
+<section class="section results-section">
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">LEARN BY BUILDING</span>
+
+            <h2>🚀 Project Ideas</h2>
+
+            <p>
+                Use these starter projects to practise your skills.
+                Choose projects that match your experience and branch.
+            </p>
+
+        </div>
+
+        <div class="projects-grid">
+
+            <article class="project-card searchable-project"
+                     data-search="portfolio website html css javascript cse it">
+
+                <h3>🌐 Personal Portfolio</h3>
+
+                <p>
+                    Create a website that presents your skills,
+                    projects and learning progress.
+                </p>
+
+                <span class="project-level">BEGINNER</span>
+
+            </article>
+
+
+            <article class="project-card searchable-project"
+                     data-search="python calculator programming cse it">
+
+                <h3>🧮 Calculator Application</h3>
+
+                <p>
+                    Practise input handling, conditions,
+                    functions and error handling.
+                </p>
+
+                <span class="project-level">BEGINNER</span>
+
+            </article>
+
+
+            <article class="project-card searchable-project"
+                     data-search="iot embedded sensors ece eee">
+
+                <h3>📡 Sensor Monitoring Prototype</h3>
+
+                <p>
+                    Explore sensor data, embedded programming
+                    and basic monitoring concepts.
+                </p>
+
+                <span class="project-level">INTERMEDIATE</span>
+
+            </article>
+
+
+            <article class="project-card searchable-project"
+                     data-search="cad mechanical aerospace design">
+
+                <h3>⚙️ CAD Design Model</h3>
+
+                <p>
+                    Learn basic part modelling, technical drawings
+                    and design documentation.
+                </p>
+
+                <span class="project-level">BEGINNER</span>
+
+            </article>
+
+
+            <article class="project-card searchable-project"
+                     data-search="data analysis python charts cse chemical civil">
+
+                <h3>📊 Engineering Data Analysis</h3>
+
+                <p>
+                    Analyse a sample dataset, calculate useful
+                    measurements and present the findings.
+                </p>
+
+                <span class="project-level">INTERMEDIATE</span>
+
+            </article>
+
+
+            <article class="project-card searchable-project"
+                     data-search="aerospace aerodynamics simulation aerospace engineering">
+
+                <h3>🚀 Flight Principles Explorer</h3>
+
+                <p>
+                    Build a simple educational model to explore
+                    flight parameters and basic aerodynamic concepts.
+                </p>
+
+                <span class="project-level">INTERMEDIATE</span>
+
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+
+<!-- ==========================================
+     FOOTER
+     No main website link
+========================================== -->
+
+<footer>
+    <div class="container footer-inner">
+
+        <div>
+            <strong>THOYAJAKSH'S SKILLS HUB</strong>
+
+            <p>
+                TSH · Skills · Projects · Learning
+            </p>
+        </div>
+
+        <p>
+            © <span id="year"></span> Thoyajaksh's Skills Hub
+        </p>
+
+    </div>
+</footer>
+
+
+<script>
+/* ==========================================
+   1. DATA
+========================================== */
+
+const branchNames = {
+    CSE: "Computer Science",
+    IT: "Information Technology",
+    ECE: "Electronics and Communication",
+    EEE: "Electrical and Electronics",
+    MECH: "Mechanical Engineering",
+    CIVIL: "Civil Engineering",
+    AERO: "Aerospace Engineering",
+    CHEM: "Chemical Engineering",
+    OTHER: "Other Engineering Branches"
+};
+
+const yearNames = {
+    1: "First Year",
+    2: "Second Year",
+    3: "Third Year",
+    4: "Fourth Year"
+};
+
+
+/*
+Each skill has:
+- title
+- description
+- icon
+- tags
+- level
+- years
+- branches
+
+Year 1 skills are shared across branches.
+Other years have branch-specific suggestions.
+*/
+
+const skills = [
+
+/* ==========================================
+   COMMON FIRST-YEAR SKILLS
+========================================== */
+
+{
+    title: "Programming Fundamentals",
+    description: "Variables, data types, conditions, loops, functions and basic problem-solving.",
+    icon: "💻",
+    tags: ["Programming", "Logic", "Basics"],
+    level: "Beginner",
+    years: [1],
+    branches: ["ALL"]
+},
+{
+    title: "Computer Fundamentals",
+    description: "Understand operating systems, hardware, software, files and computer architecture basics.",
+    icon: "🖥️",
+    tags: ["Computers", "Fundamentals"],
+    level: "Beginner",
+    years: [1],
+    branches: ["ALL"]
+},
+{
+    title: "Digital Productivity",
+    description: "Develop document preparation, spreadsheets, presentations and technical note-taking skills.",
+    icon: "📑",
+    tags: ["Productivity", "Communication"],
+    level: "Beginner",
+    years: [1],
+    branches: ["ALL"]
+},
+{
+    title: "Mathematics for Engineering",
+    description: "Practise algebra, calculus fundamentals, vectors and mathematical problem-solving.",
+    icon: "📐",
+    tags: ["Mathematics", "Problem Solving"],
+    level: "Beginner",
+    years: [1],
+    branches: ["ALL"]
+},
+{
+    title: "Git and Version Control",
+    description: "Learn repositories, commits, branches and how to maintain a project history.",
+    icon: "🔧",
+    tags: ["Git", "GitHub", "Tools"],
+    level: "Beginner",
+    years: [1, 2, 3, 4],
+    branches: ["ALL"]
+},
+{
+    title: "Technical Communication",
+    description: "Practise technical writing, documentation, presentations and explaining your work.",
+    icon: "📝",
+    tags: ["Communication", "Documentation"],
+    level: "Beginner",
+    years: [1, 2, 3, 4],
+    branches: ["ALL"]
+},
+{
+    title: "HTML and CSS",
+    description: "Build accessible web pages and learn responsive layouts and basic styling.",
+    icon: "🌐",
+    tags: ["HTML", "CSS", "Web"],
+    level: "Beginner",
+    years: [1, 2],
+    branches: ["ALL"]
+},
+
+/* ==========================================
+   CSE
+========================================== */
+
+{
+    title: "Data Structures and Algorithms",
+    description: "Study arrays, linked lists, stacks, queues, trees, graphs and algorithm analysis.",
+    icon: "🧠",
+    tags: ["DSA", "Algorithms", "Programming"],
+    level: "Intermediate",
+    years: [2, 3],
+    branches: ["CSE", "IT"]
+},
+{
+    title: "Object-Oriented Programming",
+    description: "Understand classes, objects, inheritance, abstraction, interfaces and encapsulation.",
+    icon: "⚙️",
+    tags: ["Java", "C++", "OOP"],
+    level: "Intermediate",
+    years: [2],
+    branches: ["CSE", "IT"]
+},
+{
+    title: "Database Management",
+    description: "Learn SQL, relational databases, joins, normalisation and database design.",
+    icon: "🗄️",
+    tags: ["SQL", "Databases"],
+    level: "Intermediate",
+    years: [2, 3],
+    branches: ["CSE", "IT"]
+},
+{
+    title: "Operating Systems",
+    description: "Explore processes, threads, memory management, scheduling and synchronisation.",
+    icon: "🖥️",
+    tags: ["OS", "Systems"],
+    level: "Intermediate",
+    years: [2, 3],
+    branches: ["CSE", "IT"]
+},
+{
+    title: "Web Application Development",
+    description: "Explore frontend development, APIs, backend fundamentals and application structure.",
+    icon: "🌐",
+    tags: ["Web", "APIs", "JavaScript"],
+    level: "Intermediate",
+    years: [2, 3],
+    branches: ["CSE", "IT"]
+},
+{
+    title: "Artificial Intelligence",
+    description: "Study data preparation, machine learning foundations, evaluation and responsible AI.",
+    icon: "🤖",
+    tags: ["AI", "Python", "Data"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["CSE", "IT", "OTHER"]
+},
+{
+    title: "Cloud and DevOps Fundamentals",
+    description: "Learn deployment concepts, containers, CI/CD basics and cloud infrastructure.",
+    icon: "☁️",
+    tags: ["Cloud", "DevOps"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["CSE", "IT"]
+},
+
+/* ==========================================
+   ECE
+========================================== */
+
+{
+    title: "Circuit Simulation",
+    description: "Practise circuit analysis, component behaviour and electronic circuit simulation.",
+    icon: "📡",
+    tags: ["Circuits", "Simulation"],
+    level: "Intermediate",
+    years: [2],
+    branches: ["ECE", "EEE"]
+},
+{
+    title: "Embedded Systems",
+    description: "Learn microcontrollers, embedded C, interfaces and hardware-software integration.",
+    icon: "🔌",
+    tags: ["Embedded", "C", "Hardware"],
+    level: "Intermediate",
+    years: [2, 3],
+    branches: ["ECE", "EEE"]
+},
+{
+    title: "Digital System Design",
+    description: "Explore logic circuits, digital design, simulation and programmable logic fundamentals.",
+    icon: "🔢",
+    tags: ["Digital", "Logic"],
+    level: "Intermediate",
+    years: [2, 3],
+    branches: ["ECE", "EEE"]
+},
+{
+    title: "Communication Systems",
+    description: "Explore signal processing, modulation, communication concepts and simulation.",
+    icon: "📶",
+    tags: ["Signals", "Communication"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["ECE"]
+},
+{
+    title: "PCB Design",
+    description: "Learn schematic capture, component selection and printed circuit board design.",
+    icon: "🧩",
+    tags: ["PCB", "Electronics"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["ECE", "EEE"]
+},
+
+/* ==========================================
+   EEE
+========================================== */
+
+{
+    title: "Electrical Simulation",
+    description: "Practise electrical circuit modelling, simulation and results interpretation.",
+    icon: "⚡",
+    tags: ["Electrical", "Simulation"],
+    level: "Intermediate",
+    years: [2, 3],
+    branches: ["EEE"]
+},
+{
+    title: "MATLAB and Numerical Computing",
+    description: "Use numerical methods and computational tools for engineering analysis.",
+    icon: "📊",
+    tags: ["MATLAB", "Computing"],
+    level: "Intermediate",
+    years: [2, 3],
+    branches: ["EEE", "ECE", "MECH", "CIVIL", "AERO", "CHEM"]
+},
+{
+    title: "Control Systems",
+    description: "Explore system modelling, feedback, response analysis and control simulation.",
+    icon: "🎛️",
+    tags: ["Control", "Simulation"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["EEE", "ECE", "MECH", "AERO"]
+},
+{
+    title: "Power System Analysis",
+    description: "Study electrical network modelling, power flow and engineering computation.",
+    icon: "🔋",
+    tags: ["Power", "Electrical"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["EEE"]
+},
+
+/* ==========================================
+   MECHANICAL
+========================================== */
+
+{
+    title: "Computer-Aided Design",
+    description: "Learn 2D drafting, 3D part modelling, assemblies and technical drawings.",
+    icon: "⚙️",
+    tags: ["CAD", "3D Design"],
+    level: "Beginner",
+    years: [2, 3],
+    branches: ["MECH", "AERO", "CIVIL"]
+},
+{
+    title: "Engineering Simulation",
+    description: "Understand simulation workflows, model setup, assumptions and result interpretation.",
+    icon: "📈",
+    tags: ["Simulation", "Engineering"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["MECH", "AERO", "CIVIL"]
+},
+{
+    title: "Manufacturing and 3D Printing",
+    description: "Explore manufacturing processes, design for manufacturing and additive manufacturing.",
+    icon: "🛠️",
+    tags: ["Manufacturing", "CAD"],
+    level: "Intermediate",
+    years: [2, 3, 4],
+    branches: ["MECH", "AERO"]
+},
+{
+    title: "Finite Element Analysis",
+    description: "Learn meshing, boundary conditions and introductory structural simulation.",
+    icon: "📐",
+    tags: ["FEA", "Simulation"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["MECH", "CIVIL", "AERO"]
+},
+
+/* ==========================================
+   CIVIL
+========================================== */
+
+{
+    title: "CAD and Technical Drafting",
+    description: "Practise technical drawings, dimensioning and introductory building layouts.",
+    icon: "🏗️",
+    tags: ["CAD", "Drafting"],
+    level: "Beginner",
+    years: [2],
+    branches: ["CIVIL"]
+},
+{
+    title: "Surveying Data Tools",
+    description: "Organise survey measurements and understand digital surveying workflows.",
+    icon: "📍",
+    tags: ["Surveying", "Data"],
+    level: "Intermediate",
+    years: [2, 3],
+    branches: ["CIVIL"]
+},
+{
+    title: "BIM Fundamentals",
+    description: "Explore building information modelling, digital construction and model coordination.",
+    icon: "🏢",
+    tags: ["BIM", "Modelling"],
+    level: "Intermediate",
+    years: [3, 4],
+    branches: ["CIVIL"]
+},
+{
+    title: "Structural Analysis Software",
+    description: "Learn structural modelling concepts and interpret simulation results carefully.",
+    icon: "🏛️",
+    tags: ["Structures", "Simulation"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["CIVIL"]
+},
+
+/* ==========================================
+   AEROSPACE
+========================================== */
+
+{
+    title: "CAD for Aerospace",
+    description: "Practise 3D modelling, engineering drawings and component design fundamentals.",
+    icon: "✈️",
+    tags: ["CAD", "Design"],
+    level: "Intermediate",
+    years: [2, 3],
+    branches: ["AERO"]
+},
+{
+    title: "Python for Engineering Analysis",
+    description: "Use Python for calculations, plotting, data analysis and engineering automation.",
+    icon: "🐍",
+    tags: ["Python", "Numerical Methods"],
+    level: "Intermediate",
+    years: [2, 3, 4],
+    branches: ["AERO", "MECH", "CIVIL", "CHEM", "OTHER"]
+},
+{
+    title: "Flight Simulation Fundamentals",
+    description: "Explore introductory flight dynamics, coordinate systems and simulation concepts.",
+    icon: "🛩️",
+    tags: ["Flight", "Simulation"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["AERO"]
+},
+{
+    title: "Computational Fluid Dynamics",
+    description: "Learn introductory fluid simulation, mesh concepts and interpretation of flow results.",
+    icon: "🌬️",
+    tags: ["CFD", "Fluids"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["AERO", "MECH", "CHEM"]
+},
+{
+    title: "Systems Modelling and Control",
+    description: "Study introductory system dynamics, modelling and feedback control.",
+    icon: "🎛️",
+    tags: ["Modelling", "Control"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["AERO", "ECE", "EEE", "MECH"]
+},
+
+/* ==========================================
+   CHEMICAL
+========================================== */
+
+{
+    title: "Process Simulation",
+    description: "Explore process flowsheets, material balances and introductory process modelling.",
+    icon: "🧪",
+    tags: ["Process", "Simulation"],
+    level: "Intermediate",
+    years: [2, 3],
+    branches: ["CHEM"]
+},
+{
+    title: "Engineering Data Analysis",
+    description: "Use spreadsheets or Python to analyse experimental and process data.",
+    icon: "📊",
+    tags: ["Data", "Python"],
+    level: "Intermediate",
+    years: [2, 3, 4],
+    branches: ["CHEM", "CIVIL", "MECH", "AERO", "OTHER"]
+},
+{
+    title: "Process Control Fundamentals",
+    description: "Learn instrumentation concepts, control loops and process monitoring.",
+    icon: "🎚️",
+    tags: ["Control", "Process"],
+    level: "Advanced",
+    years: [3, 4],
+    branches: ["CHEM"]
+},
+
+/* ==========================================
+   OTHER BRANCHES
+========================================== */
+
+{
+    title: "Technical Computing",
+    description: "Learn spreadsheet analysis, programming fundamentals and computational tools relevant to your discipline.",
+    icon: "💻",
+    tags: ["Computing", "Analysis"],
+    level: "Beginner",
+    years: [2, 3],
+    branches: ["OTHER"]
+},
+{
+    title: "Interdisciplinary Project Design",
+    description: "Combine engineering concepts, data, documentation and prototyping to solve a practical problem.",
+    icon: "🧩",
+    tags: ["Projects", "Design"],
+    level: "Intermediate",
+    years: [2, 3, 4],
+    branches: ["OTHER"]
+}
+
+];
+
+
+/* ==========================================
+   2. PAGE STATE
+========================================== */
+
+let selectedYear = 1;
+let selectedBranch = "CSE";
+let searchQuery = "";
+
+
+/* ==========================================
+   3. DOM ELEMENTS
+========================================== */
+
+const yearButtons = document.querySelectorAll("[data-year]");
+const branchButtons = document.querySelectorAll("[data-branch]");
+
+const skillsGrid = document.getElementById("skillsGrid");
+const emptyState = document.getElementById("emptyState");
+
+const searchInput = document.getElementById("searchInput");
+const searchForm = document.getElementById("searchForm");
+const clearSearch = document.getElementById("clearSearch");
+
+const searchStatus = document.getElementById("searchStatus");
+const selectionTag = document.getElementById("selectionTag");
+const selectionDescription =
+    document.getElementById("selectionDescription");
+const resultCount = document.getElementById("resultCount");
+
+
+/* ==========================================
+   4. UPDATE ACTIVE BUTTONS
+========================================== */
+
+function updateSelectionButtons() {
+
+    yearButtons.forEach(function(button) {
+
+        const active =
+            Number(button.dataset.year) === selectedYear;
+
+        button.classList.toggle("active", active);
+
+        button.setAttribute(
+            "aria-pressed",
+            String(active)
+        );
+
+    });
+
+    branchButtons.forEach(function(button) {
+
+        const active =
+            button.dataset.branch === selectedBranch;
+
+        button.classList.toggle("active", active);
+
+        button.setAttribute(
+            "aria-pressed",
+            String(active)
+        );
+
+    });
+
+}
+
+
+/* ==========================================
+   5. GET SKILLS FOR YEAR AND BRANCH
+========================================== */
+
+function getMatchingSkills() {
+
+    const query = searchQuery.toLowerCase().trim();
+
+    return skills.filter(function(skill) {
+
+        const matchesYear =
+            skill.years.includes(selectedYear);
+
+        const matchesBranch =
+            skill.branches.includes("ALL") ||
+            skill.branches.includes(selectedBranch);
+
+        const searchableText = [
+            skill.title,
+            skill.description,
+            skill.icon,
+            ...skill.tags,
+            skill.level,
+            branchNames[selectedBranch],
+            yearNames[selectedYear]
+        ].join(" ").toLowerCase();
+
+        const matchesSearch =
+            !query || searchableText.includes(query);
+
+        return matchesYear &&
+               matchesBranch &&
+               matchesSearch;
+
+    });
+
+}
+
+
+/* ==========================================
+   6. CREATE SKILL CARDS SAFELY
+========================================== */
+
+function createSkillCard(skill) {
+
+    const article = document.createElement("article");
+    article.className = "skill-card";
+
+    const icon = document.createElement("div");
+    icon.className = "skill-icon";
+    icon.textContent = skill.icon;
+
+    const title = document.createElement("h3");
+    title.textContent = skill.title;
+
+    const description = document.createElement("p");
+    description.textContent = skill.description;
+
+    const tags = document.createElement("div");
+    tags.className = "skill-meta";
+
+    skill.tags.forEach(function(tagText) {
+
+        const tag = document.createElement("span");
+        tag.className = "skill-tag";
+        tag.textContent = tagText;
+
+        tags.appendChild(tag);
+
+    });
+
+    const footer = document.createElement("div");
+    footer.className = "skill-footer";
+
+    const level = document.createElement("span");
+    level.className = "level";
+    level.textContent = skill.level;
+
+    const label = document.createElement("span");
+    label.className = "resource-link";
+    label.textContent = "Learning topic";
+
+    footer.append(level, label);
+
+    article.append(icon, title, description, tags, footer);
+
+    return article;
+
+}
+
+
+/* ==========================================
+   7. RENDER SKILLS
+========================================== */
+
+function renderSkills() {
+
+    updateSelectionButtons();
+
+    selectionTag.textContent =
+        yearNames[selectedYear] + " · " +
+        branchNames[selectedBranch];
+
+    if (selectedYear === 1) {
+
+        selectionDescription.textContent =
+            "Showing common foundational skills useful across engineering branches.";
+
+    } else {
+
+        selectionDescription.textContent =
+            "Showing shared skills and topics relevant to " +
+            branchNames[selectedBranch] +
+            " in " + yearNames[selectedYear] + ".";
+
+    }
+
+    const matchingSkills = getMatchingSkills();
+
+    skillsGrid.replaceChildren();
+
+    matchingSkills.forEach(function(skill) {
+
+        skillsGrid.appendChild(createSkillCard(skill));
+
+    });
+
+    resultCount.textContent =
+        matchingSkills.length + " skill(s) found";
+
+    emptyState.style.display =
+        matchingSkills.length === 0 ? "block" : "none";
+
+    skillsGrid.style.display =
+        matchingSkills.length === 0 ? "none" : "grid";
+
+    if (searchQuery) {
+
+        searchStatus.textContent =
+            matchingSkills.length +
+            " matching skill(s) for \"" +
+            searchQuery + "\".";
+
+    } else {
+
+        searchStatus.textContent =
+            "Choose a year and branch to explore suitable skills.";
+
+    }
+
+}
+
+
+/* ==========================================
+   8. YEAR BUTTONS
+========================================== */
+
+yearButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        selectedYear = Number(button.dataset.year);
+
+        renderSkills();
+
+        document.getElementById("results").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    });
+
+});
+
+
+/* ==========================================
+   9. BRANCH BUTTONS
+========================================== */
+
+branchButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        selectedBranch = button.dataset.branch;
+
+        renderSkills();
+
+        document.getElementById("results").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    });
+
+});
+
+
+/* ==========================================
+   10. SEARCH
+========================================== */
+
+searchInput.addEventListener("input", function() {
+
+    searchQuery = searchInput.value.trim();
+
+    renderSkills();
+
+});
+
+
+searchForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    searchQuery = searchInput.value.trim();
+
+    renderSkills();
+
+    document.getElementById("results").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+});
+
+
+clearSearch.addEventListener("click", function() {
+
+    searchInput.value = "";
+    searchQuery = "";
+
+    renderSkills();
+
+    searchInput.focus();
+
+});
+
+
+/* ==========================================
+   11. COPYRIGHT YEAR
+========================================== */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+/* ==========================================
+   12. INITIALISE
+========================================== */
+
+renderSkills();
+
+</script>
+
+</body>
+</html>
